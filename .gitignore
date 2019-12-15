@@ -31,3 +31,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+db/yubin10.db
+*.swp
+tags
