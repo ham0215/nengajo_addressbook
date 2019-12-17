@@ -16,4 +16,4 @@
 % docker-compose up --build -d
 ```
 
-http://localhost:3009/ へアクセス
+http://localhost:3009/post_app_addressbooks へアクセス
