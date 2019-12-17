@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+はがきデザインキッド by ゆうびん.jpのdbを使って宛先を表示するwebアプリケーション
 
-Things you may want to cover:
+# 初期設定
 
-* Ruby version
+はがきデザインキッドのDBをコピーする。
 
-* System dependencies
+```console
+% cp -p /Users/[username]/Library/Preferences/designKit.[hash]/Local Store/yubin10.db db/
+```
 
-* Configuration
+サーバー起動
 
-* Database creation
+```console
+% docker-compose up --build -d
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3009/ へアクセス
