@@ -23,6 +23,9 @@ http://localhost:3009/post_app_addressbooks へアクセス
 ```ruby
 % docker-compose exec web bundle exec rails c
 irb> PostAppAdressbook.all.each do |a|
+irb>   a.post_app_address2.gsub!(/-/, 'ー')
+irb>   a.post_app_address3.gsub!(/-/, 'ー')
+irb>   a.post_app_address4.gsub!(/-/, 'ー')
 irb>   a.post_app_disp_address.gsub!(/-/, 'ー')
 irb>   a.save!
 irb> end
