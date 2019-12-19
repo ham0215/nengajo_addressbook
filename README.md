@@ -17,3 +17,13 @@
 ```
 
 http://localhost:3009/post_app_addressbooks へアクセス
+
+住所のハイフンを縦書き表示させるために全角にする
+
+```ruby
+% docker-compose exec web bundle exec rails c
+irb> PostAppAdressbook.all.each do |a|
+irb>   a.post_app_disp_address.gsub!(/-/, 'ー')
+irb>   a.save!
+irb> end
+```
