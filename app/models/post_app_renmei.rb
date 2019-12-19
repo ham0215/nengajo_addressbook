@@ -16,7 +16,7 @@ class PostAppRenmei < ApplicationRecord
     when 1
       '様'
     when 5
-      '君'
+      'くん'
     when 6
       'ちゃん'
     end

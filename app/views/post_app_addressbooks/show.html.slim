@@ -2,10 +2,10 @@ section.sheet
   p.zip
     = @addressbook.post_app_zip
   p.address
-    = @addressbook.post_app_disp_address
+    == @addressbook.html_safe_address
   .name
     p
-      = "#{@addressbook.post_app_disp} 様"
+      = @addressbook.display_name
     - @addressbook.display_renmeis.each do |renmei|
       p
         = renmei
