@@ -5,6 +5,12 @@ class PostAppRenmei < ApplicationRecord
 
   scope :valid, -> { where.not(post_app_name_mei: '') }
 
+  def renmei
+    "#{post_app_name_mei}　#{keisho}"
+  end
+
+  private
+
   def keisho
     case post_app_renkeisho.to_i
     when 1

@@ -6,6 +6,6 @@ section.sheet
   .name
     p
       = "#{@addressbook.post_app_disp} 様"
-    - @addressbook.post_app_renmeis.each do |renmei|
+    - @addressbook.display_renmeis.each do |renmei|
       p
-        = "#{renmei.post_app_name_mei}　#{renmei.keisho}"
+        = renmei
