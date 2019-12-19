@@ -1,7 +1,11 @@
-.
-  = @addressbook.post_app_disp
-.
-  | 〒
-  = @addressbook.post_app_zip
-.
-  = @addressbook.post_app_disp_address
+section.sheet
+  p.zip
+    = @addressbook.post_app_zip
+  p.address
+    = @addressbook.post_app_disp_address
+  .name
+    p
+      = "#{@addressbook.post_app_disp} 様"
+    - @addressbook.post_app_renmeis.each do |renmei|
+      p
+        = "#{renmei.post_app_name_mei}　#{renmei.keisho}"
