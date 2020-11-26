@@ -5,11 +5,11 @@ class PostAppAdressbook < ApplicationRecord
 
   def html_safe_address
     i = 0
-    address = [post_app_address1 + post_app_address2]
-    address[i += 1] = '' if (address[i].size + post_app_address3.size) > 23
-    address[i] += post_app_address3
-    address[i += 1] = '' if (address[i].size + post_app_address4.size) > 23
-    address[i] += post_app_address4
+    address = [address1 + address2]
+    address[i += 1] = '' if (address[i].size + address3.size) > 23
+    address[i] += address3
+    address[i += 1] = '' if (address[i].size + address4.size) > 23
+    address[i] += address4
     address.map(&:html_safe).join('<br>')
   end
 
@@ -22,6 +22,12 @@ class PostAppAdressbook < ApplicationRecord
       post_app_renmeis.each do |renmei|
         y << "#{renmei_margin}#{renmei.renmei}"
       end
+    end
+  end
+
+  (1..4).each do |i|
+    define_method "address#{i}" do
+      public_send("post_app_address#{i}").gsub(/-/, 'ー')
     end
   end
 

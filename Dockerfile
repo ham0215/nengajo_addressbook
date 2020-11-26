@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.7.2
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     vim \
     locales \
     locales-all \
+    sqlite3 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
