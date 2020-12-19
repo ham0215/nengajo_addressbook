@@ -27,7 +27,22 @@ class PostAppAdressbook < ApplicationRecord
 
   (1..4).each do |i|
     define_method "address#{i}" do
-      public_send("post_app_address#{i}").gsub(/-/, 'ー')
+      value = public_send("post_app_address#{i}").gsub(/-/, 'ー')
+
+      if i == 3
+        value = value.gsub(/1/, '一')
+        value = value.gsub(/2/, '二')
+        value = value.gsub(/3/, '三')
+        value = value.gsub(/4/, '四')
+        value = value.gsub(/5/, '五')
+        value = value.gsub(/6/, '六')
+        value = value.gsub(/7/, '七')
+        value = value.gsub(/8/, '八')
+        value = value.gsub(/9/, '九')
+        value = value.gsub(/0/, '○')
+      end
+
+      value
     end
   end
 
