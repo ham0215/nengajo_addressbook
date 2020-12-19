@@ -1,5 +1,6 @@
 class PostAppRenmei < ApplicationRecord
   self.table_name = 'post_app_renmei'
+  self.primary_key = 'post_app_no'
 
   belongs_to :post_app_adressbook, foreign_key: 'post_app_no'
 
