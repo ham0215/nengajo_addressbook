@@ -16,4 +16,10 @@
 % docker-compose up --build -d
 ```
 
+## preview for printing
+
 http://localhost:3009/post_app_addressbooks へアクセス
+
+## edit using administrate
+
+http://localhost:3009/admin へアクセス
